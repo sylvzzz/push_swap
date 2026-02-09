@@ -115,7 +115,7 @@ can succeed with different averages:
 Resources
 42 Subject PDF: push_swap
 
-Radix Sort (Binary): https://en.wikipedia.org/wiki/Radix_sort
+Radix Sort (Binary): http://each.usp.br/digiampietri/SIN5013/11-tempoLinear_RadixSort.pdf
 
 Official checker_linux tool provided by 42
 
