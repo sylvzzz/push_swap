@@ -34,16 +34,6 @@ This implementation uses:
 
 ### Small Stack Optimization
 - A **hardcoded algorithm for 3 numbers** to ensure minimal operations
-yaml
-Copy code
-
----
-
-Se quiseres, posso:
-- adaptar o README para **nível 100% (radix + chunks)**  
-- simplificar para um estilo mais “peer-friendly”
-- ou ajustar o texto para ficar ainda mais **avaliador-proof** 😄
-- Avoids unnecessary overhead for very small inputs
 
 ### Data Structure Choice
 
