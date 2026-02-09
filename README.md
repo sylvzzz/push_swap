@@ -34,32 +34,26 @@ This implementation uses:
 
 ### Small Stack Optimization
 - A **hardcoded algorithm for 3 numbers** to ensure minimal operations
+yaml
+Copy code
+
+---
+
+Se quiseres, posso:
+- adaptar o README para **nível 100% (radix + chunks)**  
+- simplificar para um estilo mais “peer-friendly”
+- ou ajustar o texto para ficar ainda mais **avaliador-proof** 😄
 - Avoids unnecessary overhead for very small inputs
 
 ### Data Structure Choice
+
 - Stacks are implemented using **linked lists** instead of arrays  
   This choice simplifies rotations and push operations without reallocations.
 
 ---
 
-## Project Structure
-
-.
-├── Makefile
-├── includes/
-│ └── push_swap.h
-├── src/
-│ ├── main.c
-│ ├── parsing.c
-│ ├── operations/
-│ ├── radix/
-│ └── small_sort/
-├── libft/
-└── README.md
-
-
-- **libft** is used for common utilities
-- **ft_printf** is used for outputting instructions
+- **libft** project is used for common utilities/functions
+- **ft_printf** project is used for output's
 
 ---
 
