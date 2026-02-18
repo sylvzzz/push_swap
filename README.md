@@ -92,7 +92,7 @@ If no arguments are passed, the program produces no output.
 
 Performance
 ✅ ~1100 operations for 100 random numbers
-✅ ~6784 operations for 500 random numbers
+✅ ~6700 operations for 500 random numbers
 
 Meets the minimal benchmark requirements of the project wich are:
 
