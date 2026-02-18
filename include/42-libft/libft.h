@@ -6,7 +6,7 @@
 /*   By: dbotelho <dbotelho@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 10:55:42 by dbotelho          #+#    #+#             */
-/*   Updated: 2026/01/08 15:07:49 by dbotelho         ###   ########.fr       */
+/*   Updated: 2026/02/18 17:04:07 by dbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <unistd.h>
 # include <stdint.h>
 
-int			ft_atoi(const char *nptr);
+long			ft_atoi(const char *nptr);
 void		ft_bzero(void *s, size_t n);
 int			ft_isalnum(int c);
 int			ft_isalpha(int c);

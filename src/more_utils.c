@@ -6,7 +6,7 @@
 /*   By: dbotelho <dbotelho@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 20:05:56 by dbotelho          #+#    #+#             */
-/*   Updated: 2026/02/17 20:36:15 by dbotelho         ###   ########.fr       */
+/*   Updated: 2026/02/18 17:07:00 by dbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_stack	*fill_stack_values(int ac, char **av)
 {
 	t_stack		*stack_a;
-	long int	nb;
+	long	nb;
 	int			i;
 
 	stack_a = NULL;

@@ -6,16 +6,16 @@
 /*   By: dbotelho <dbotelho@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:05:36 by dbotelho          #+#    #+#             */
-/*   Updated: 2025/10/30 13:54:50 by dbotelho         ###   ########.fr       */
+/*   Updated: 2026/02/18 17:01:00 by dbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+long	ft_atoi(const char *nptr)
 {
 	int	i;
-	int	res;
+	long	res;
 	int	sinal;
 
 	i = 0;
