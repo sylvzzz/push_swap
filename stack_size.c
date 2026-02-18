@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   stack_size.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbotelho <dbotelho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dbotelho <dbotelho@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/21 12:42:01 by dbotelho          #+#    #+#             */
-/*   Updated: 2026/02/17 19:57:48 by dbotelho         ###   ########.fr       */
+/*   Created: 2026/02/17 20:09:51 by dbotelho          #+#    #+#             */
+/*   Updated: 2026/02/17 20:35:52 by dbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/push_swap.h"
 
-char	*ft_strchr(const char *s, int c)
+int	get_stack_size(t_stack *stack)
 {
-	size_t	i;
-	size_t	n;
+	int	i;
 
-	n = ft_strlen(s);
 	i = 0;
-	while (i <= n)
+	while (stack != NULL)
 	{
-		if ((unsigned char)s[i] == (unsigned char)c)
-			return ((char *)&s[i]);
+		stack = stack->next;
 		i++;
 	}
-	return (NULL);
+	return (i);
 }

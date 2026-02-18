@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dbotelho <dbotelho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dbotelho <dbotelho@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/21 12:42:01 by dbotelho          #+#    #+#             */
-/*   Updated: 2026/02/17 19:57:48 by dbotelho         ###   ########.fr       */
+/*   Created: 2025/10/27 10:39:30 by dbotelho          #+#    #+#             */
+/*   Updated: 2025/11/10 16:28:25 by dbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strnstr(const char *b, const char *l, size_t len)
 {
 	size_t	i;
 	size_t	n;
 
-	n = ft_strlen(s);
+	n = 0;
 	i = 0;
-	while (i <= n)
+	if (l[0] == '\0')
+		return ((char *)b);
+	while (b[i] && i < len)
 	{
-		if ((unsigned char)s[i] == (unsigned char)c)
-			return ((char *)&s[i]);
+		n = 0;
+		while (b[i + n] && b[i + n] == l[n] && (i + n < len))
+		{
+			n++;
+			if (l[n] == '\0')
+				return ((char *)b + i);
+		}
 		i++;
 	}
 	return (NULL);

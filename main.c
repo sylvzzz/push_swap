@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbotelho <dbotelho@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 16:07:14 by afgarcia          #+#    #+#             */
-/*   Updated: 2026/02/09 13:26:36 by dbotelho         ###   ########.fr       */
+/*   Created: 2026/01/08 16:07:14 by dbotelho          #+#    #+#             */
+/*   Updated: 2026/02/17 20:35:29 by dbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,6 @@ int	is_sorted(t_stack *stack)
 		stack = stack->next;
 	}
 	return (1);
-}
-
-void print_stack(t_stack *stack)
-{
-	while(stack)
-	{
-		ft_printf("%d\n", stack->nbr);
-		stack = stack->next;
-	}
 }
 
 void	push_swap(t_stack **stack_a, t_stack **stack_b, int stack_size)
@@ -60,6 +51,24 @@ static void	free_split(char **split)
 	free(split);
 }
 
+static char	**get_args(int ac, char **av, int *should_free)
+{
+	char	**args;
+
+	*should_free = 0;
+	if (ac != 2)
+		return (av);
+	args = ft_split(av[1], ' ');
+	if (!args || !args[0])
+	{
+		if (args)
+			free_split(args);
+		exit_error(NULL, NULL);
+	}
+	*should_free = 1;
+	return (args);
+}
+
 int	main(int ac, char **av)
 {
 	t_stack	*stack_a;
@@ -70,38 +79,17 @@ int	main(int ac, char **av)
 
 	if (ac < 2)
 		return (0);
-	
-	should_free = 0;
-	// Se só há 1 argumento, divide a string
-	if (ac == 2)
-	{
-		args = ft_split(av[1], ' ');
-		should_free = 1;
-		if (!args || !args[0])  // Verifica se o split retornou algo
-		{
-			if (args)
-				free_split(args);
-			exit_error(NULL, NULL);
-		}
-	}
-	else
-		args = av;
-	
+	args = get_args(ac, av, &should_free);
 	if (!is_correct_input(args))
 	{
 		if (should_free)
 			free_split(args);
 		exit_error(NULL, NULL);
 	}
-	
 	stack_b = NULL;
-	stack_a = fill_stack_values(should_free ? 0 : ac, args);
+	stack_a = fill_stack_values(should_free * 0 + (!should_free) * ac, args);
 	stack_size = get_stack_size(stack_a);
-	
-	push_swap(&stack_a, &stack_b, stack_size);/* 
-
-	print_stack(stack_a); */
-	
+	push_swap(&stack_a, &stack_b, stack_size);
 	if (should_free)
 		free_split(args);
 	free_stack(&stack_a);

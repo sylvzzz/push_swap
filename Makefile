@@ -3,10 +3,15 @@ NAME = push_swap
 SRC = \
 	main.c \
 	src/input_checking.c \
-	src/all_operations.c \
+	src/pushing.c \
+	src/rotations.c \
+	src/reverse_rotating.c \
+	src/swaps.c \
 	src/radix_sort.c \
 	src/tiny_sort.c \
 	src/assign_index.c \
+	src/more_utils.c \
+	src/stack_size.c \
     src/utils.c
 
 OFILES = $(SRC:.c=.o)

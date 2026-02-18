@@ -6,13 +6,12 @@
 /*   By: dbotelho <dbotelho@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 11:45:00 by dbotelho          #+#    #+#             */
-/*   Updated: 2026/02/09 11:51:15 by dbotelho         ###   ########.fr       */
+/*   Updated: 2026/02/17 20:35:42 by dbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-// Encontra o valor máximo na stack
 static int	find_max_index(t_stack *stack)
 {
 	int		max;
@@ -37,7 +36,6 @@ static int	find_max_index(t_stack *stack)
 	return (max_index);
 }
 
-// Ordena 3 elementos
 void	tiny_sort(t_stack **stack)
 {
 	int	max_index;
